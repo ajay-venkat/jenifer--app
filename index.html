@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#F26389" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Jenifer Sweets" />
+    <meta name="description" content="Jenifer Sweets & Bakery QR Table Ordering System & Live Kitchen Fulfillment Portal. 37 Years of Sweet Excellence in Mayiladuthurai." />
+    
+    <link rel="icon" type="image/png" href="/jenifer-logo.png" />
+    <link rel="apple-touch-icon" href="/jenifer-logo.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Google Fonts: Plus Jakarta Sans, Outfit, Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <title>Jenifer Sweets & Bakery | QR Table Ordering & Kitchen Portal</title>
+  </head>
+  <body class="bg-brand-cream text-brand-brown antialiased selection:bg-brand-pink selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(err => {
+            console.log('SW registration note:', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
